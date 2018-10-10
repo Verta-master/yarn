@@ -11,6 +11,10 @@
 </head>
 <body>
   <header class="header">
+    <form action="#" method="get" class="search__form">
+      <input type="text" class="search__input" placeholder="|">
+      <button type="submit" class="search__btn" title="Найти"></button>
+    </form>
     <div class="wrapper header__wrap">
       <div class="logo">
         <img src="img/logo.svg" alt="Logo" width="91" height="51">
@@ -36,13 +40,7 @@
         </ul>
       </nav>
       <div class="header__user">
-        <div class="search">
-          <button type="button" class="search__show" title="Поиск"></button>
-          <form action="#" method="get" class="search__form">
-            <input type="text" class="search__input" placeholder="|">
-            <button type="submit" class="search__btn" title="Найти"></button>
-          </form>
-        </div>
+        <button type="button" class="search__show" title="Поиск"></button>
         <a href="#" class="header__login" title="Личный кабинет"></a>
         <a href="#" class="header__like header__like--full" title="Избранное"></a>
         <a href="#" class="header__cart" title="Корзина"></a>
