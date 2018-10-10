@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="robots" content="noindex">
   <meta  name="viewport" content="width=device-width,initial-scale=1">
-  <title>Title</title>
+  <title>Шестая Шерсть</title>
   <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/css/swiper.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -35,37 +36,44 @@
         </ul>
       </nav>
       <div class="header__user">
-        <form action="#" method="get" class="search">
-          <button type="submit" class="search__btn" title="Найти"></button>
-          <input type="text" class="search__input" placeholder="Поиск">
-        </form>
+        <div class="search">
+          <button type="button" class="search__show" title="Поиск"></button>
+          <form action="#" method="get" class="search__form">
+            <input type="text" class="search__input" placeholder="|">
+            <button type="submit" class="search__btn" title="Найти"></button>
+          </form>
+        </div>
         <a href="#" class="header__login" title="Личный кабинет"></a>
-        <a href="#" class="header__selected header__selected--full" title="Избранное"></a>
+        <a href="#" class="header__like header__like--full" title="Избранное"></a>
         <a href="#" class="header__cart" title="Корзина"></a>
         <nav class="menu">
           <button type="button" class="menu__btn"><span class="visually-hidden">Меню</span>
           </button>
           <div class="menu__wrap">
-            <button type="button" class="menu__close" title="Закрыть"></button>
-            <ul class="menu__list">
-              <li class="menu__item menu__item--active">
-                <a href="#">Блог</a>
-              </li>
-              <li class="menu__item">
-                <a href="#">Мастер-классы</a>
-              </li>
-              <li class="menu__item">
-                <a href="#">Доставка и оплата</a>
-              </li>
-              <li class="menu__item">
-                <a href="#">Контакты</a>
-              </li>
-              <li class="menu__item">
-                <a href="#">F.A.Q.</a>
-              </li>
-            </ul>
-            <address class="menu__info menu__info--address">Ул. 2-я Синичкина, д. 9а, стр.4, помещение 1, Москва</address>
-            <a href="tel:+79250059006" class="menu__info menu__info--phone">+7 925 005-90-06</a>
+            <div class="wrapper">
+              <button type="button" class="menu__close" title="Закрыть"></button>
+              <ul class="menu__list">
+                <li class="menu__item menu__item--active">
+                  <a href="#">Блог</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Мастер-классы</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Доставка и оплата</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">Контакты</a>
+                </li>
+                <li class="menu__item">
+                  <a href="#">F.A.Q.</a>
+                </li>
+              </ul>
+              <div class="menu__info">
+                <address class="menu__text menu__text--address">Ул. 2-я Синичкина, д. 9а, стр.4, помещение 1, Москва</address>
+                <a href="tel:+79250059006" class="menu__text menu__text--phone">+7 925 005-90-06</a>
+              </div>
+            </div>
           </div>
         </nav>
       </div>
@@ -90,10 +98,10 @@
           <div class="promo__block">
             <p>28.10.2018<br>18:00-22:00</p>
           </div>
-          <div class="promo__text">
-            <p class="title">«Как выбрать пряжу»</p>
+          <a href="#" class="promo__text">
+            <p class="promo__title">«Как выбрать пряжу»</p>
             <p>Мастер-класс</p>
-          </div>
+          </a>
           <div class="promo__block">
             <p>Трубная пл., 2<br>Неглинная Плаза<br>Офис 28</p>
           </div>
@@ -104,51 +112,69 @@
     <section class="benefits wrapper">
       <ul class="benefits__list">
         <li class="benefits__item">
-          <img src="img/icon-box.svg" alt="Удобная доставка" width="49" height="53">
+          <figure class="benefits__img">
+            <img src="img/icon-box.svg" alt="Удобная доставка" width="49" height="53">
+          </figure>
           <p class="benefits__title">Удобная доставка</p>
           <p>Бесплатная доставка при заказе от 3 000 рублей. Срочная доставка в течение 3 часов по Москве</p>
         </li>
         <li class="benefits__item">
-          <img src="img/icon-wallet.svg" alt="4 способа оплаты" width="46" height="41">
+          <figure class="benefits__img">
+            <img src="img/icon-wallet.svg" alt="4 способа оплаты" width="46" height="41">
+          </figure>
           <p class="benefits__title">4 способа оплаты</p>
           <p>4 способа оплаты для вашего удобства. Можно взять товар в аренду и в рассрочку.</p>
         </li>
         <li class="benefits__item">
-          <img src="img/icon-knitting.svg" alt="Качественные товары" width="56" height="56">
+          <figure class="benefits__img">
+            <img src="img/icon-knitting.svg" alt="Качественные товары" width="56" height="56">
+          </figure>
           <p class="benefits__title">Качественные товары</p>
           <p>У нас только качественные и сертифицированные товары.</p>
         </li>
       </ul>
     </section>
     
-    <section class="blog">
+    <section class="blog wrapper">
       <p class="title-2">Блог</p>
-      <ul class="blog__list">
-        <li class="blog__item">
-          <a href="#" class="blog__img">
-            <img src="img/img-3.png" alt="Вязание свитера" width="370" height="220">
-          </a>
-          <a href="#" class="blog__title">Вязание свитера</a>
-          <time datetime="2017-06-14">14.06.2017 13:36</time>
-          <p>Хотите связать модный свитер? Для вас схемы вязания свитеров, пуловеров, кофточек, регланов спицами и крючком с описанием на русском. Утепляйтесь!</p>
-        </li>
-        <li class="blog__item">
-          <a href="#" class="blog__img">
-            <img src="img/img-5.png" alt="Набираем петельки" width="370" height="220">
-          </a>
-          <a href="#" class="blog__title">Набираем петельки</a>
-          <time datetime="2017-10-19">19.10.2017 15:12</time>
-          <p>Хотите связать модный свитер? Для вас схемы вязания свитеров, пуловеров, кофточек, регланов спицами и крючком с описанием на русском.</p>
-        </li>
-        <li class="blog__item">
-          <a href="#" class="blog__img">
-            <img src="img/img-4.png" alt="Крючок-что это?" width="370" height="220">
-          </a>
-          <a href="#" class="blog__title">Крючок-что это?</a>
-          <time datetime="2018-02-10">10.02.2018 9:15</time>
-          <p>Для вас схемы вязания свитеров, пуловеров, кофточек, регланов спицами и крючком с описанием на русском. Утепляйтесь!</p>
-        </li>
-      </ul>
+      <div class="swiper-container blog__slider">
+        <ul class="swiper-wrapper blog__list">
+          <li class="swiper-slide blog__item">
+            <figure class="blog__img">
+              <img src="img/img-3.png" alt="Вязание свитера" width="370" height="220">
+            </figure>
+            <a href="#" class="blog__title">Вязание свитера</a>
+            <time datetime="2017-06-14">14.06.2017 13:36</time>
+            <p>Хотите связать модный свитер? Для вас схемы вязания свитеров, пуловеров, кофточек, регланов спицами и крючком с описанием на русском. Утепляйтесь!</p>
+          </li>
+          <li class="swiper-slide blog__item">
+            <figure class="blog__img">
+              <img src="img/img-5.png" alt="Набираем петельки" width="370" height="220">
+            </figure>
+            <a href="#" class="blog__title">Набираем петельки</a>
+            <time datetime="2017-10-19">19.10.2017 15:12</time>
+            <p>Хотите связать модный свитер? Для вас схемы вязания свитеров, пуловеров, кофточек, регланов спицами и крючком с описанием на русском.</p>
+          </li>
+          <li class="swiper-slide blog__item">
+            <figure class="blog__img">
+              <img src="img/img-4.png" alt="Крючок-что это?" width="370" height="220">
+            </figure>
+            <a href="#" class="blog__title">Крючок-что это?</a>
+            <time datetime="2018-02-10">10.02.2018 9:15</time>
+            <p>Для вас схемы вязания свитеров, пуловеров, кофточек, регланов спицами и крючком с описанием на русском. Утепляйтесь!</p>
+          </li>
+          <li class="swiper-slide blog__item">
+            <figure class="blog__img">
+              <img src="img/img-3.png" alt="Вязание свитера" width="370" height="220">
+            </figure>
+            <a href="#" class="blog__title">Вязание свитера</a>
+            <time datetime="2017-06-14">14.06.2017 13:36</time>
+            <p>Хотите связать модный свитер? Для вас схемы вязания свитеров, пуловеров, кофточек, регланов спицами и крючком с описанием на русском. Утепляйтесь!</p>
+          </li>
+        </ul>
+      </div>
+      <div class="swiper-button-prev blog__prev"></div>
+      <div class="swiper-button-next blog__next"></div>
     </section>
   </main>
   
@@ -185,6 +211,22 @@
   </footer>
   
   <script src="js/jquery-3.2.1.min.js"></script>
-  
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.2.2/js/swiper.min.js"></script>
+
+  <!-- Slider -->
+  <script>
+    var mySwiper = new Swiper ('.blog__slider', {
+      navigation: {
+        nextEl: '.blog__next',
+        prevEl: '.blog__prev',
+      },
+      simulateTouch: false,
+      preventClicks: false,
+      preventClicksPropagation: false,
+      slidesPerView: 'auto',
+      spaceBetween: 30,
+    });
+  </script>
 </body>
 </html>

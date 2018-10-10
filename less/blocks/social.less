@@ -1,0 +1,33 @@
+.social {
+  .reset();
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social__item {
+  margin-left: 10px;
+  margin-right: 10px;
+  
+  a {
+    width: 29px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(227, 189, 177, 0.7);
+    border-radius: 50%;
+    .transition();
+    
+    &:hover,
+    &:active {
+      background-color: rgba(227, 189, 177, 1);
+      .transition();
+    }
+  }
+  
+  svg {
+    fill: #fff;
+  }
+}
