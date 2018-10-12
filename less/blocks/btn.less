@@ -1,0 +1,36 @@
+.btn {
+  width: 110px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: @pink;
+  border-radius: 4px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: @green;
+    .transition();
+  }
+}
+
+.btn-white {
+  width: 110px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: @green;
+  border: 1px solid @green;
+  border-radius: 4px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: #fff;
+    background-color: @green;
+    .transition();
+  }
+}
