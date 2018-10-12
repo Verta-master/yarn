@@ -451,7 +451,7 @@ h6 {
 }
 h1 {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   font-size: 48px;
   line-height: 61px;
 }
@@ -984,15 +984,15 @@ h2,
   margin: 0;
   padding: 0;
   border: 0;
+  padding-top: 5px;
+  padding-bottom: 8px;
 }
 .sidebar__field--border {
-  padding-top: 20px;
-  margin-bottom: 20px;
+  padding-top: 25px;
+  margin-top: 8px;
+  margin-bottom: 25px;
   border-top: 1px solid #A0A0A0;
   border-bottom: 1px solid #A0A0A0;
-}
-.sidebar__field--color .sidebar__drop {
-  padding-bottom: 10px;
 }
 .sidebar__drop,
 .sidebar__radio,
@@ -1001,7 +1001,7 @@ h2,
 }
 .sidebar__label {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: #A0A0A0;
   padding-left: 28px;
   position: relative;
@@ -1182,7 +1182,7 @@ h2,
 }
 .breadcrumbs {
   font-size: 11px;
-  margin-bottom: 37px;
+  margin-bottom: 17px;
 }
 a.breadcrumbs__link {
   margin-right: 12px;
@@ -1207,7 +1207,8 @@ a.breadcrumbs__link:active {
   width: 870px;
 }
 .content__search {
-  width: 240px;
+  width: 270px;
+  margin-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1280,6 +1281,7 @@ a.breadcrumbs__link:active {
 }
 .catalog__info {
   padding: 20px;
+  padding-bottom: 40px;
 }
 .catalog__like {
   position: absolute;
@@ -1315,8 +1317,8 @@ a.breadcrumbs__link:active {
 }
 .catalog__new {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
+  bottom: 2px;
+  left: 2px;
   width: 59px;
   height: 61px;
   font-size: 9px;
@@ -1331,8 +1333,8 @@ a.breadcrumbs__link:active {
 }
 .catalog__sale {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
+  bottom: 2px;
+  left: 2px;
   width: 59px;
   height: 61px;
   font-size: 18px;
@@ -1347,8 +1349,8 @@ a.breadcrumbs__link:active {
 }
 .catalog__hit {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 15px;
   color: #FF0000;
   text-transform: uppercase;
   font-size: 16px;
@@ -1356,22 +1358,35 @@ a.breadcrumbs__link:active {
   letter-spacing: 0.1em;
 }
 .catalog__title {
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
+}
+.catalog__title:hover,
+.catalog__title:active {
+  color: #E3BDB1;
+  -webkit-transition: ease-out 0.3s;
+  transition: ease-out 0.3s;
 }
 .catalog__price {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 18px;
   line-height: 22px;
 }
 .catalog__text {
-  margin-top: 5px;
-  margin-bottom: 5px;
   font-size: 13px;
   line-height: 17px;
 }
+.catalog__text p {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
 .catalog__btns {
-  margin-top: 20px;
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
