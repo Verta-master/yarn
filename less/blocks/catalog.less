@@ -31,6 +31,7 @@
 
 .catalog__info {
   padding: 20px;
+  padding-bottom: 40px;
 }
 
 .catalog__like {
@@ -71,8 +72,8 @@
 
 .catalog__new {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
+  bottom: 2px;
+  left: 2px;
   width: 59px;
   height: 61px;
   font-size: 9px;
@@ -88,8 +89,8 @@
 
 .catalog__sale {
   position: absolute;
-  bottom: 5px;
-  left: 5px;
+  bottom: 2px;
+  left: 2px;
   width: 59px;
   height: 61px;
   font-size: 18px;
@@ -105,8 +106,8 @@
 
 .catalog__hit {
   position: absolute;
-  bottom: 5px;
-  right: 5px;
+  bottom: 10px;
+  right: 15px;
   color: #FF0000;
   text-transform: uppercase;
   font-size: 16px;
@@ -115,25 +116,38 @@
 }
 
 .catalog__title {
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
+  .transition();
+  
+  &:hover,
+  &:active {
+    color: @pink;
+    .transition();
+  }
 }
 
 .catalog__price {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 18px;
   line-height: 22px;
 }
 
 .catalog__text {
-  margin-top: 5px;
-  margin-bottom: 5px;
   font-size: 13px;
   line-height: 17px;
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
 }
 
 .catalog__btns {
-  margin-top: 20px;
+  margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
