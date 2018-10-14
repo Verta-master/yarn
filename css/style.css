@@ -1819,6 +1819,9 @@ a.breadcrumbs__link:active {
   border-bottom: 1px solid #A0A0A0;
   margin-bottom: 15px;
 }
+.card__block--single {
+  display: block;
+}
 .card__column {
   width: 270px;
   display: -webkit-box;
