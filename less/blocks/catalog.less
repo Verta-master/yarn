@@ -208,6 +208,14 @@
   border-radius: 50%;
   font-size: 18px;
   color: @pink;
+  .transition();
+  
+  &:hover,
+  &:active {
+    background-color: @pink;
+    color: #fff;
+    .transition();
+  }
 }
 
 .catalog__number {
