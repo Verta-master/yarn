@@ -1730,6 +1730,9 @@ a.breadcrumbs__link:active {
   width: 270px;
   height: 45px;
 }
+.card h1 {
+  margin-bottom: 15px;
+}
 .card__wrapper {
   padding-bottom: 50px;
   display: -webkit-box;
@@ -1772,7 +1775,7 @@ a.breadcrumbs__link:active {
   float: right;
 }
 .card__wrap {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid #A0A0A0;
 }
@@ -1785,7 +1788,7 @@ a.breadcrumbs__link:active {
           justify-content: space-between;
   padding-bottom: 25px;
   border-bottom: 1px solid #A0A0A0;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 .card__column {
   width: 270px;
@@ -1801,11 +1804,15 @@ a.breadcrumbs__link:active {
           justify-content: flex-start;
 }
 .card__text {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+}
+.card__text p {
+  margin-top: 0;
+  margin-bottom: 8px;
 }
 .card__weight {
   margin: 0;
-  padding-left: 25px;
+  padding-left: 30px;
   line-height: 32px;
   background-image: url(../img/icon-yarn.svg);
   background-repeat: no-repeat;
@@ -1814,7 +1821,7 @@ a.breadcrumbs__link:active {
 }
 .card__needles {
   margin: 0;
-  padding-left: 25px;
+  padding-left: 30px;
   line-height: 32px;
   background-image: url(../img/icon-needles.svg);
   background-repeat: no-repeat;
@@ -1823,7 +1830,7 @@ a.breadcrumbs__link:active {
 }
 .card__length {
   margin: 0;
-  padding-left: 25px;
+  padding-left: 30px;
   line-height: 32px;
   background-image: url(../img/icon-arrows.svg);
   background-repeat: no-repeat;
@@ -1832,7 +1839,7 @@ a.breadcrumbs__link:active {
 }
 .card__sample {
   margin: 0;
-  padding-left: 25px;
+  padding-left: 30px;
   line-height: 32px;
   background-image: url(../img/icon-rect.svg);
   background-repeat: no-repeat;
@@ -1841,7 +1848,7 @@ a.breadcrumbs__link:active {
 }
 .card__size {
   margin: 0;
-  padding-left: 25px;
+  padding-left: 30px;
   line-height: 32px;
   background-image: url(../img/icon-sweater.svg);
   background-repeat: no-repeat;
@@ -1850,7 +1857,7 @@ a.breadcrumbs__link:active {
 }
 .card__icon {
   display: inline-block;
-  vertical-align: bottom;
+  vertical-align: middle;
   margin-right: 5px;
 }
 .card__signs {
@@ -1874,12 +1881,12 @@ a.breadcrumbs__link:active {
   min-width: 120px;
   color: #A0A0A0;
   position: absolute;
-  top: 110%;
+  top: 170%;
   left: 0;
 }
 .card__total {
   margin-left: auto;
-  margin-right: 40px;
+  margin-right: 50px;
   font-size: 16px;
 }
 .card__total span {
@@ -1887,7 +1894,7 @@ a.breadcrumbs__link:active {
 }
 .hit {
   position: relative;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 20px;
 }
 .swiper-pagination-bullet {
@@ -1907,5 +1914,5 @@ a.breadcrumbs__link:active {
   list-style: none;
 }
 .hit__slider {
-  padding-bottom: 40px;
+  padding-bottom: 30px;
 }
