@@ -1781,6 +1781,7 @@ a.breadcrumbs__link:active {
 }
 .card__code {
   margin: 0;
+  color: #A0A0A0;
   float: right;
 }
 .card__wrap {
@@ -1901,10 +1902,14 @@ a.breadcrumbs__link:active {
 .card__total span {
   font-weight: 700;
 }
+.card__label {
+  min-width: 70px;
+  padding-right: 10px;
+}
 .card__select {
   width: 78px;
   height: 35px;
-  margin-left: 10px;
+  margin-right: 10px;
   padding-left: 10px;
   font-size: 16px;
   border: 1px solid #E3BDB1;
@@ -1934,6 +1939,51 @@ a.breadcrumbs__link:active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
+}
+.card__radiobtn {
+  display: none;
+}
+.card__radio {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  line-height: 26px;
+  cursor: pointer;
+}
+.card__radio::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 1px solid #A0A0A0;
+}
+.card__radio::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 3px;
+  width: 7px;
+  height: 7px;
+  background-color: #A6B389;
+  border-radius: 50%;
+}
+.card__radiobtn:checked + .card__radio {
+  color: #A6B389;
+  font-weight: 700;
+}
+.card__radiobtn:checked + .card__radio::before {
+  border-color: #A6B389;
+}
+.card__radiobtn:checked + .card__radio::after {
+  display: block;
+}
+.card__checkbox {
+  margin-bottom: 10px;
 }
 .hit {
   position: relative;
