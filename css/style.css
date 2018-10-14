@@ -1108,7 +1108,7 @@ h2,
   overflow: hidden;
 }
 .sidebar__radio:checked + .sidebar__radiobtn {
-  border: 1px solid #E3BDB1;
+  border-color: #E3BDB1;
 }
 .sidebar__range {
   display: -webkit-box;
@@ -1742,6 +1742,25 @@ a.breadcrumbs__link:active {
 .card h1 {
   margin-bottom: 15px;
 }
+.card ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.card ul li {
+  position: relative;
+  padding-left: 10px;
+}
+.card ul li::before {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 3px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #E3BDB1;
+}
 .card__wrapper {
   padding-bottom: 50px;
   display: -webkit-box;
@@ -1818,6 +1837,7 @@ a.breadcrumbs__link:active {
   margin-bottom: 8px;
 }
 .card__text {
+  margin-top: 7px;
   margin-bottom: 15px;
 }
 .card__weight {
@@ -1873,6 +1893,16 @@ a.breadcrumbs__link:active {
 .card__signs {
   margin-top: auto;
 }
+.card__signs .sidebar__radiobtn {
+  margin-right: 13px;
+  width: 31px;
+  height: 31px;
+  border-width: 2px;
+}
+.card__signs .sidebar__radiobtn img {
+  width: 23px;
+  height: 23px;
+}
 .card__labels {
   margin-bottom: 30px;
 }
@@ -1923,6 +1953,7 @@ a.breadcrumbs__link:active {
   background-position: center right 10px;
   outline: none;
   cursor: pointer;
+  color: inherit;
 }
 .card__select::-ms-expand {
   color: transparent;
