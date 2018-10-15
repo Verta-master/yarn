@@ -9,7 +9,7 @@
   span {
     color: #A0A0A0;
     font-size: 9px;
-    line-height: 13px;
+    line-height: 1.2;
     letter-spacing: 0.1em;
   }
 }
@@ -88,12 +88,48 @@
 .form__btn {
   width: 162px;
   height: 45px;
-  margin-top: 28px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 #cash:checked ~ .form__wrap .form__pay--cash,
 #visa:checked ~ .form__wrap .form__pay--visa {
   background-color: rgba(227, 189, 176, 0.31);
   border-color: rgba(227, 189, 176, 0.31);
+}
+
+.form__checkbox {
+  display: none;
+}
+
+.form__check {
+  position: relative;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  cursor: pointer;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    border: 1px solid @pink;
+  }
+  
+  &::after {
+    display: none;
+    content: "\2714";
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: @pink;
+  }
+}
+
+.form__checkbox:checked + .form__check::after {
+  display: block;
 }

@@ -83,12 +83,24 @@
   box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
   border-radius: 4px;
   
-  &:last-child {
-    margin-bottom: 15px;
+  &--class {
+    padding-top: 10px;
+    box-shadow: none;
+    margin-bottom: 80px;
+    
+    .master__info {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+    
+    .master__img {
+      box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+    }
   }
 }
 
 .master__img {
+  position: relative;
   width: 537px;
   display: flex;
   justify-content: center;
@@ -151,4 +163,25 @@
 
 .master__text {
   margin-bottom: 27px;
+}
+
+.master__total {
+  margin-left: 50px;
+  float: right;
+  font-size: 24px;
+}
+
+.master__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #fff;
+  background-image: url(../img/icon-play.svg);
+  background-repeat: no-repeat;
+  background-position: left 30px center;
+  background-size: 35px 40px;
 }
