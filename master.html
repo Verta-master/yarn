@@ -6,6 +6,7 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Шестая Шерсть</title>
   <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -129,7 +130,7 @@
                 </div>
                 <div class="master__wrap">
                   <p class="master__price">133000 &#8381;</p>
-                  <a href="#" class="btn master__btn">Записаться</a>
+                  <a data-fancybox data-src="#call" href="javascript:;" class="btn master__btn">Записаться</a>
                 </div>
               </div>
             </li>
@@ -160,7 +161,7 @@
                 </div>
                 <div class="master__wrap">
                   <p class="master__price">133000 &#8381;</p>
-                  <a href="#" class="btn master__btn">Записаться</a>
+                  <a data-fancybox data-src="#call" href="javascript:;" class="btn master__btn">Записаться</a>
                 </div>
               </div>
             </li>
@@ -191,7 +192,7 @@
                 </div>
                 <div class="master__wrap">
                   <p class="master__price">133000 &#8381;</p>
-                  <a href="#" class="btn master__btn">Записаться</a>
+                  <a data-fancybox data-src="#call" href="javascript:;" class="btn master__btn">Записаться</a>
                 </div>
               </div>
             </li>
@@ -246,7 +247,36 @@
     </div>
   </footer>
   
+  <!-- Modal window -->
+  <div style="display: none;" id="call" class="modal">
+    <p class="title-h4">  Запись на мастер-класс «Вязание шапочки»</p>
+    <form action="#" method="post" class="form">
+      <fieldset class="form__field">
+        <input type="text" id="name" class="form__input">
+        <label for="name" class="form__label">Имя<span>*</span></label>
+      </fieldset>
+      <fieldset class="form__field">
+        <input type="tel" id="phone" class="form__input">
+        <label for="phone" class="form__label">Телефон<span>*</span></label>
+      </fieldset>
+      <fieldset class="form__field">
+        <input type="email" id="email" class="form__input">
+        <label for="email" class="form__label">E-mail<span>*</span></label>
+      </fieldset>
+      <p>Оплата</p>
+      <input type="radio" id="visa" name="payment" class="form__radio" checked>
+      <input type="radio" id="cash" name="payment" class="form__radio">
+      <div class="form__wrap">
+        <label for="visa" class="form__pay form__pay--visa">Банковской картой онлайн</label>
+        <label for="cash" class="form__pay form__pay--cash">На месте наличными или картой</label>
+      </div>
+      <button type="button" class="btn form__btn">Подтвердить</button>
+      <span>Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+    </form>
+  </div>
+  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js"></script>
 </body>
 </html>

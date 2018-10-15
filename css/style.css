@@ -482,6 +482,13 @@ h3,
   font-size: 30px;
   line-height: 38px;
 }
+h4,
+.title-h4 {
+  font-family: "Lora", "Arial", sans-serif;
+  margin-top: 0;
+  font-size: 24px;
+  line-height: 31px;
+}
 .wrapper {
   width: 1200px;
   padding-left: 15px;
@@ -2360,4 +2367,100 @@ a.breadcrumbs__link:active {
 }
 .master__text {
   margin-bottom: 27px;
+}
+.modal {
+  max-width: 420px;
+  padding: 45px 50px;
+  border-radius: 4px;
+}
+.form {
+  max-width: 270px;
+}
+.form p {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+.form span {
+  color: #A0A0A0;
+  font-size: 9px;
+  line-height: 13px;
+  letter-spacing: 0.1em;
+}
+.form__field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  position: relative;
+}
+.form__input {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 15px;
+  padding: 0 15px;
+  border: 1px solid #A0A0A0;
+  border-radius: 4px;
+}
+.form__input:focus + .form__label {
+  display: none;
+}
+.form__label {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  color: #A0A0A0;
+}
+.form__label span {
+  color: red;
+}
+.form__radio {
+  display: none;
+}
+.form__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.form__pay {
+  display: block;
+  width: 130px;
+  height: 70px;
+  padding: 15px;
+  padding-left: 55px;
+  color: #A0A0A0;
+  font-size: 9px;
+  line-height: 13px;
+  border: 1px solid #A0A0A0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form__pay--visa {
+  background-image: url(../img/visa.png);
+  background-size: 36px 38px;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+}
+.form__pay--cash {
+  background-image: url(../img/bank.png);
+  background-size: 31px 29px;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+}
+.form__btn {
+  width: 162px;
+  height: 45px;
+  margin-top: 28px;
+  margin-bottom: 20px;
+}
+#cash:checked ~ .form__wrap .form__pay--cash,
+#visa:checked ~ .form__wrap .form__pay--visa {
+  background-color: rgba(227, 189, 176, 0.31);
+  border-color: rgba(227, 189, 176, 0.31);
 }
