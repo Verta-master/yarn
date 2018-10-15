@@ -468,6 +468,7 @@ h1 {
 }
 h2,
 .title-h2 {
+  font-family: "Lora", "Arial", sans-serif;
   margin-top: 0;
   margin-bottom: 35px;
   font-size: 24px;
@@ -2054,6 +2055,12 @@ a.breadcrumbs__link:active {
   -webkit-box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
           box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
 }
+.delivery__tabs--faq .delivery__block {
+  display: block;
+}
+.delivery__tabs--faq .delivery__list {
+  padding-top: 0;
+}
 .delivery__block,
 .delivery__radio {
   display: none;
@@ -2153,4 +2160,36 @@ a.breadcrumbs__link:active {
 .delivery__drop p {
   margin-top: 0;
   margin-bottom: 20px;
+}
+.delivery__drop a {
+  display: block;
+  margin-bottom: 5px;
+}
+.delivery__drop a:hover,
+.delivery__drop a:active {
+  text-decoration: underline;
+}
+.delivery__drop ol {
+  margin: 0;
+  padding: 0;
+  counter-reset: myCounter;
+  list-style-type: none;
+  padding-bottom: 10px;
+}
+.delivery__drop ol li {
+  padding-left: 15px;
+  position: relative;
+}
+.delivery__drop ol li::before {
+  counter-increment: myCounter;
+  content: counter(myCounter) ")";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.delivery__answer {
+  max-width: 670px;
+}
+.delivery__answer .title-h2 {
+  margin-bottom: 15px;
 }
