@@ -1,0 +1,154 @@
+.master {
+  padding-top: 10px;
+  padding-bottom: 20px;
+  
+  .title-h3 {
+    margin-bottom: 25px;
+  }
+}
+
+.master__field,
+.master__radio {
+  display: none;
+}
+
+.master__title {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.master__name {
+  margin-right: 50px;
+  color: #A0A0A0;
+  cursor: pointer;
+}
+
+.master__switch {
+  position: absolute;
+  top: 0;
+  left: 110px;
+  width: 35px;
+  height: 20px;
+  border: 1px solid @pink;
+  border-radius: 15px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: @pink;
+    .transition();
+  }
+}
+
+#radio2:checked ~ #tabs-2,
+#radio1:checked ~ #tabs-1 {
+  display: block;
+}
+
+#radio2:checked ~ .master__title .master__name--2,
+#radio1:checked ~ .master__title .master__name--1 {
+  color: #6E6E6E;
+}
+
+#radio2:checked ~ .master__title .master__switch::before {
+  right: 2px;
+  left: auto;
+  .transition();
+}
+
+#radio1:checked ~ .master__title .master__switch::before {
+  left: 2px;
+  right: auto;
+  .transition();
+}
+
+.master__list {
+  .reset();
+  list-style: none;
+}
+
+.master__item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+  border-radius: 4px;
+  
+  &:last-child {
+    margin-bottom: 15px;
+  }
+}
+
+.master__img {
+  width: 537px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+  
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.master__info {
+  width: 570px;
+  padding: 40px;
+  padding-left: 0;
+  
+  p {
+    margin: 0;
+  }
+  
+  ul {
+    .reset();
+    list-style: none;
+    
+    li {
+      position: relative;
+      padding-left: 10px;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 3px;
+        width: 3px;
+        height: 3px;
+        border-radius: 50%;
+        background-color: @pink;
+      }
+    }
+  }
+}
+
+.master__wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.master__price {
+  font-size: 24px;
+}
+
+.master__btn {
+  width: 170px;
+  height: 45px;
+}
+
+.master__text {
+  margin-bottom: 27px;
+}
