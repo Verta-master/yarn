@@ -80,159 +80,134 @@
   <main>
     <nav class="breadcrumbs wrapper">
       <a href="#" class="breadcrumbs__link">Главная</a>
-      <span class="breadcrumbs__link">Личный кабинет</span>
+      <span class="breadcrumbs__link">Корзина</span>
     </nav>
     
-    <section class="cabinet wrapper">
-      <h1>Личный кабинет</h1>
-      <form action="#" class="cabinet__form">
-        <div class="cabinet__pic">
-          <figure class="cabinet__img">
-            <img src="img/img-1.png" alt="" width="570" height="570">
-          </figure>
-          <input type="file" id="file" class="cabinet__file">
-          <label for="file" class="cabinet__upload">Загрузить фото</label>
-        </div>
-        <div class="cabinet__block">
-          <fieldset class="form__field">
-            <input type="text" id="name" class="form__input" required>
-            <label for="name" class="form__label">Имя<span>*</span></label>
-          </fieldset>
-          <fieldset class="form__field">
-            <input type="tel" id="phone" class="form__input" required>
-            <label for="phone" class="form__label">Телефон<span>*</span></label>
-          </fieldset>
-          <fieldset class="form__field">
-            <input type="email" id="email" class="form__input" required>
-            <label for="email" class="form__label">E-mail<span>*</span></label>
-          </fieldset>
-        </div>
-        <div class="cabinet__block">
-          <fieldset class="form__field">
-            <input type="password" id="password" class="form__input" required>
-            <label for="password" class="form__label">Старый пароль<span>*</span></label>
-          </fieldset>
-          <fieldset class="form__field">
-            <input type="password" id="password2" class="form__input" required>
-            <label for="password2" class="form__label">Новый пароль<span>*</span></label>
-          </fieldset>
-          <fieldset class="form__field">
-            <input type="password" id="password3" class="form__input" required>
-            <label for="password3" class="form__label">Подтвердить пароль<span>*</span></label>
-          </fieldset>
-        </div>
-        <div class="cabinet__btn">
-          <button type="submit" class="btn cabinet__apply">Применить</button>
-        </div>
-      </form>
-      
-      <div class="history">
-        <div class="title">
-          <p class="title-h4">История заказов</p>
-          <select class="form__select">
-            <option value="1">Сначала недавние</option>
-            <option value="2">Сначала давние</option>
-          </select>
-        </div>
-        
-        <div class="history__order">
-          <time datetime="2018-06-27">27.06.2018</time>
-          <div class="history__wrap">
+    <section class="order wrapper">
+      <h1>Корзина</h1>
+      <div class="order__wrap">
+        <div class="history__wrap">
+          <div class="history__header">
             <p class="history__number">Заказ № 236</p>
-            <ul class="history__list">
-              <li class="history__item">
-                <figure class="history__img">
-                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
-                </figure>
-                <div class="history__info">
-                  <a href="#" class="history__title">Daruma Shades of Cotton Linen</a>
-                  <p>Цвет № 12, Dark Grey</p>
-                  <p>Код товара: 4033493240147</p>
-                </div>
-                <p class="history__price">Аренда 2 340 &#8381;</p>
-              </li>
-              <li class="history__item">
-                <figure class="history__img">
-                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
-                </figure>
-                <div class="history__info">
-                  <a href="#" class="history__title">Lana Grossa Shades of Cotton Linen</a>
-                  <p>Цвет № 166, Blue Sky</p>
-                  <p>Код товара: 4033493240147</p>
-                </div>
-                <p class="history__price">1200 &#8381;</p>
-              </li>
-              <li class="history__item">
-                <figure class="history__img">
-                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
-                </figure>
-                <div class="history__info">
-                  <a href="#" class="history__title">Спицы разъёмные LYKKE, дерево Driftwool, длина 11,5 см</a>
-                  <p>Материал: дерево</p>
-                  <p>Код товара: 6578948673</p>
-                </div>
-                <p class="history__price">600 &#8381;</p>
-              </li>
-            </ul>
-            <div class="history__delivery">
-              <address>
-                <p>Доставка по адресу:</p>
-                <p>Серебристый б-р, дом 26, квартира 34 Санкт-Петербург, Россия</p>
-              </address>
-              <p class="history__all">Итого: <b>114 140 &#8381;</b></p>
-            </div>
-            <a href="#" class="btn history__btn">Повторить заказ</a>
+            <a href="#" class="history__remove">Удалить все</a>
+          </div>
+          <ul class="history__list">
+            <li class="history__item">
+              <figure class="history__img">
+                <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+              </figure>
+              <div class="history__info">
+                <a href="#" class="history__title">Daruma Shades of Cotton Linen</a>
+                <p>Цвет № 12, Dark Grey</p>
+                <p>Код товара: 4033493240147</p>
+                <a href="#" class="history__remove" title="Удалить"></a>
+                <button type="button" class="catalog__like catalog__like--fill" title="Избранное"></button>
+              </div>
+              <div class="catalog__order">
+                <button type="button" class="catalog__value">-</button>
+                <input type="text" class="catalog__number" value="10000">
+                <button type="button" class="catalog__value">+</button>
+              </div>
+              <p class="history__price">Аренда 2 340 &#8381;</p>
+            </li>
+            <li class="history__item">
+              <figure class="history__img">
+                <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+              </figure>
+              <div class="history__info">
+                <a href="#" class="history__title">Lana Grossa Shades of Cotton Linen</a>
+                <p>Цвет № 166, Blue Sky</p>
+                <p>Код товара: 4033493240147</p>
+                <a href="#" class="history__remove" title="Удалить"></a>
+                <button type="button" class="catalog__like catalog__like--fill" title="Избранное"></button>
+              </div>
+              <div class="catalog__order">
+                <button type="button" class="catalog__value">-</button>
+                <input type="text" class="catalog__number" value="10000">
+                <button type="button" class="catalog__value">+</button>
+              </div>
+              <p class="history__price">1200 &#8381;</p>
+            </li>
+            <li class="history__item">
+              <figure class="history__img">
+                <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+              </figure>
+              <div class="history__info">
+                <a href="#" class="history__title">Спицы разъёмные LYKKE, дерево Driftwool, длина 11,5 см</a>
+                <p>Материал: дерево</p>
+                <p>Код товара: 6578948673</p>
+                <a href="#" class="history__remove" title="Удалить"></a>
+                <button type="button" class="catalog__like catalog__like--fill" title="Избранное"></button>
+              </div>
+              <div class="catalog__order">
+                <button type="button" class="catalog__value">-</button>
+                <input type="text" class="catalog__number" value="10000">
+                <button type="button" class="catalog__value">+</button>
+              </div>
+              <p class="history__price">600 &#8381;</p>
+            </li>
+          </ul>
+          <div class="history__delivery">
+            <p class="history__all">Итого: <b>114 140 &#8381;</b></p>
           </div>
         </div>
-        
-        <div class="history__order">
-          <time datetime="2018-06-27">27.06.2018</time>
-          <div class="history__wrap">
-            <p class="history__number">Заказ № 236</p>
-            <ul class="history__list">
-              <li class="history__item">
-                <figure class="history__img">
-                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
-                </figure>
-                <div class="history__info">
-                  <a href="#" class="history__title">Daruma Shades of Cotton Linen</a>
-                  <p>Цвет № 12, Dark Grey</p>
-                  <p>Код товара: 4033493240147</p>
-                </div>
-                <p class="history__price">Аренда 2 340 &#8381;</p>
-              </li>
-              <li class="history__item">
-                <figure class="history__img">
-                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
-                </figure>
-                <div class="history__info">
-                  <a href="#" class="history__title">Lana Grossa Shades of Cotton Linen</a>
-                  <p>Цвет № 166, Blue Sky</p>
-                  <p>Код товара: 4033493240147</p>
-                </div>
-                <p class="history__price">1200 &#8381;</p>
-              </li>
-              <li class="history__item">
-                <figure class="history__img">
-                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
-                </figure>
-                <div class="history__info">
-                  <a href="#" class="history__title">Спицы разъёмные LYKKE, дерево Driftwool, длина 11,5 см</a>
-                  <p>Материал: дерево</p>
-                  <p>Код товара: 6578948673</p>
-                </div>
-                <p class="history__price">600 &#8381;</p>
-              </li>
-            </ul>
-            <div class="history__delivery">
-              <address>
-                <p>Доставка по адресу:</p>
-                <p>Серебристый б-р, дом 26, квартира 34 Санкт-Петербург, Россия</p>
-              </address>
-              <p class="history__all">Итого: <b>114 140 &#8381;</b></p>
+
+        <div class="order__aside">
+          <p class="title-h4">Оформление заказа</p>
+          <form action="#" method="post" class="form">
+            <div class="order__field">
+              <p class="order__title">Получатель</p>
+              <fieldset class="form__field">
+                <input type="text" id="name" class="form__input" required>
+                <label for="name" class="form__label">Имя<span>*</span></label>
+              </fieldset>
+              <fieldset class="form__field">
+                <input type="tel" id="phone" class="form__input" required>
+                <label for="phone" class="form__label">Телефон<span>*</span></label>
+              </fieldset>
+              <fieldset class="form__field">
+                <input type="email" id="email" class="form__input" required>
+                <label for="email" class="form__label">E-mail<span>*</span></label>
+              </fieldset>
             </div>
-            <a href="#" class="btn history__btn">Повторить заказ</a>
-          </div>
+            <div class="order__field">
+              <p class="order__title">Доставка</p>
+              <fieldset class="form__field">
+                <input type="text" id="city" class="form__input" required>
+                <label for="city" class="form__label">Город<span>*</span></label>
+              </fieldset>
+              <fieldset class="form__field">
+                <input type="text" id="address" class="form__input" required>
+                <label for="address" class="form__label">Адрес (улица, дом, кв)<span>*</span></label>
+              </fieldset>
+            </div>
+            <div class="order__field">
+              <p class="order__title">Способ доставки</p>
+              <input type="radio" id="delivery" name="delivery" class="form__radio" checked>
+              <input type="radio" id="post" name="delivery" class="form__radio">
+              <div class="form__wrap">
+                <label for="delivery" class="form__pay form__pay--delivery">Курьером</label>
+                <label for="post" class="form__pay form__pay--post">Почтой</label>
+              </div>
+            </div>
+            <div class="order__field">
+              <p class="order__title">Способ оплаты</p>
+              <input type="radio" id="visa" name="payment" class="form__radio" checked>
+              <input type="radio" id="cash" name="payment" class="form__radio">
+              <input type="radio" id="bank" name="payment" class="form__radio">
+              <input type="radio" id="credit" name="payment" class="form__radio">
+              <div class="form__wrap">
+                <label for="visa" class="form__pay form__pay--visa">Банковской картой онлайн</label>
+                <label for="cash" class="form__pay form__pay--cash">При получении наличными или картой</label>
+                <label for="bank" class="form__pay form__pay--bank">Банковский перевод</label>
+                <label for="credit" class="form__pay form__pay--credit">Рассрочка</label>
+              </div>
+            </div>
+            <div class="form__btns">
+              <p>Итого: <b>124 140 &#8381;</b></p>
+              <button type="submit" class="btn form__order">Заказать</button>
+            </div>
+          </form>
         </div>
       </div>
     </section>

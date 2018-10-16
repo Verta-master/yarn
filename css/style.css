@@ -668,6 +668,7 @@ h4,
   top: 0;
   left: 0;
   right: 0;
+  min-height: 100vh;
   padding-top: 140px;
   padding-bottom: 140px;
   background-color: #E9C6BA;
@@ -2436,7 +2437,11 @@ a.breadcrumbs__link:active {
 }
 .form p {
   font-size: 16px;
-  letter-spacing: 0.1em;
+}
+.form .order__title {
+  font-size: 16px;
+  letter-spacing: normal;
+  font-weight: 700;
 }
 .form span {
   color: #A0A0A0;
@@ -2516,11 +2521,20 @@ a.breadcrumbs__link:active {
           align-items: center;
 }
 .form__pay {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 130px;
   height: 70px;
   padding: 15px;
   padding-left: 55px;
+  margin-bottom: 10px;
   color: #A0A0A0;
   font-size: 9px;
   line-height: 13px;
@@ -2540,11 +2554,39 @@ a.breadcrumbs__link:active {
   background-repeat: no-repeat;
   background-position: left 15px center;
 }
+.form__pay--delivery {
+  background-image: url(../img/icon-delivery.svg);
+  background-size: 47px 26px;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+}
+.form__pay--post {
+  background-image: url(../img/icon-post.svg);
+  background-size: 27px 32px;
+  background-repeat: no-repeat;
+  background-position: left 25px center;
+}
+.form__pay--bank {
+  background-image: url(../img/icon-bank.png);
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+}
+.form__pay--credit {
+  background-image: url(../img/icon-credit.svg);
+  background-size: 26px 36px;
+  background-repeat: no-repeat;
+  background-position: left 15px center;
+}
 .form__btn {
   width: 162px;
   height: 45px;
   margin-bottom: 10px;
 }
+#delivery:checked ~ .form__wrap .form__pay--delivery,
+#post:checked ~ .form__wrap .form__pay--post,
+#bank:checked ~ .form__wrap .form__pay--bank,
+#credit:checked ~ .form__wrap .form__pay--credit,
 #cash:checked ~ .form__wrap .form__pay--cash,
 #visa:checked ~ .form__wrap .form__pay--visa {
   background-color: rgba(227, 189, 176, 0.31);
@@ -2581,6 +2623,21 @@ a.breadcrumbs__link:active {
 }
 .form__checkbox:checked + .form__check::after {
   display: block;
+}
+.form__order {
+  width: 130px;
+}
+.form__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 30px;
 }
 .review .title-h3 {
   margin-bottom: 0;
@@ -2903,7 +2960,7 @@ a.breadcrumbs__link:active {
 .history__title {
   display: block;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .history__title:hover,
 .history__title:active {
@@ -2926,6 +2983,7 @@ a.breadcrumbs__link:active {
 }
 .history__info {
   width: 400px;
+  line-height: 26px;
 }
 .history__price {
   width: 130px;
@@ -2933,6 +2991,7 @@ a.breadcrumbs__link:active {
   font-weight: 700;
 }
 .history__delivery {
+  width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
   display: -webkit-box;
@@ -2952,6 +3011,10 @@ a.breadcrumbs__link:active {
 .history__delivery p {
   margin: 0;
 }
+.history__delivery .history__all {
+  font-size: 16px;
+  margin-left: auto;
+}
 .history__btn {
   width: 170px;
 }
@@ -2959,6 +3022,78 @@ a.breadcrumbs__link:active {
   margin-bottom: 25px;
 }
 .history__wrap {
+  padding: 30px 35px;
+  -webkit-box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+          box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+}
+.history__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.history__remove {
+  position: relative;
+  padding-left: 25px;
+  font-size: 16px;
+}
+.history__remove::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 13px;
+  height: 16px;
+  background-image: url(../img/icon-basket.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.history__remove:hover,
+.history__remove:active {
+  color: #E3BDB1;
+}
+.history__remove:hover::before,
+.history__remove:active::before {
+  background-image: url(../img/icon-basket-pink.svg);
+}
+.order {
+  margin-bottom: 115px;
+}
+.order .history__wrap {
+  width: 770px;
+}
+.order .history__info {
+  width: 280px;
+}
+.order .catalog__like {
+  position: static;
+  margin-left: 5px;
+}
+.order__wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+}
+.order__wrap .history__wrap {
+  padding-top: 20px;
+}
+.order__aside {
+  width: 370px;
   padding: 30px 35px;
   -webkit-box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
           box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
