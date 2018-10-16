@@ -41,7 +41,7 @@
 .history__title {
   display: block;
   font-weight: 700;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   
   &:hover,
   &:active {
@@ -61,6 +61,7 @@
 
 .history__info {
   width: 400px;
+  line-height: 26px;
 }
 
 .history__price {
@@ -70,6 +71,7 @@
 }
 
 .history__delivery {
+  width: 100%;
   padding-top: 25px;
   padding-bottom: 25px;
   display: flex;
@@ -84,6 +86,11 @@
   p {
     margin: 0;
   }
+  
+  .history__all {
+    font-size: 16px;
+    margin-left: auto;
+  }
 }
 
 .history__btn {
@@ -97,4 +104,37 @@
 .history__wrap {
   padding: 30px 35px;
   box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+}
+
+.history__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.history__remove {
+  position: relative;
+  padding-left: 25px;
+  font-size: 16px;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 13px;
+    height: 16px;
+    background-image: url(../img/icon-basket.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  &:hover,
+  &:active {
+    color: @pink;
+    
+    &::before {
+      background-image: url(../img/icon-basket-pink.svg);
+    }
+  }
 }

@@ -3,7 +3,12 @@
   
   p {
     font-size: 16px;
-    letter-spacing: 0.1em;
+  }
+  
+  .order__title {
+    font-size: 16px;
+    letter-spacing: normal;
+    font-weight: 700;
   }
   
   span {
@@ -89,11 +94,14 @@
 }
 
 .form__pay {
-  display: block;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
   width: 130px;
   height: 70px;
   padding: 15px;
   padding-left: 55px;
+  margin-bottom: 10px;
   color: #A0A0A0;
   font-size: 9px;
   line-height: 13px;
@@ -114,6 +122,34 @@
     background-repeat: no-repeat;
     background-position: left 15px center;
   }
+  
+  &--delivery {
+    background-image: url(../img/icon-delivery.svg);
+    background-size: 47px 26px;
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+  }
+  
+  &--post {
+    background-image: url(../img/icon-post.svg);
+    background-size: 27px 32px;
+    background-repeat: no-repeat;
+    background-position: left 25px center;
+  }
+  
+  &--bank {
+    background-image: url(../img/icon-bank.png);
+    background-size: 35px 35px;
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+  }
+  
+  &--credit {
+    background-image: url(../img/icon-credit.svg);
+    background-size: 26px 36px;
+    background-repeat: no-repeat;
+    background-position: left 15px center;
+  }
 }
 
 .form__btn {
@@ -122,6 +158,10 @@
   margin-bottom: 10px;
 }
 
+#delivery:checked ~ .form__wrap .form__pay--delivery,
+#post:checked ~ .form__wrap .form__pay--post,
+#bank:checked ~ .form__wrap .form__pay--bank,
+#credit:checked ~ .form__wrap .form__pay--credit,
 #cash:checked ~ .form__wrap .form__pay--cash,
 #visa:checked ~ .form__wrap .form__pay--visa {
   background-color: rgba(227, 189, 176, 0.31);
@@ -163,4 +203,15 @@
 
 .form__checkbox:checked + .form__check::after {
   display: block;
+}
+
+.form__order {
+  width: 130px;
+}
+
+.form__btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
