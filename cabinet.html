@@ -6,8 +6,6 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Шестая Шерсть</title>
   <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
-  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -82,136 +80,159 @@
   <main>
     <nav class="breadcrumbs wrapper">
       <a href="#" class="breadcrumbs__link">Главная</a>
-      <a href="#" class="breadcrumbs__link">Мастер-классы</a>
-      <span class="breadcrumbs__link">Вяжем свитер</span>
+      <span class="breadcrumbs__link">Личный кабинет</span>
     </nav>
     
-    <section class="master wrapper">
-      <p class="master__total">133000 &#8381;</p>
-      <h1>Вязание детской шапочки<br>из мериноса и Альпаки для девочки</h1>
+    <section class="cabinet wrapper">
+      <h1>Личный кабинет</h1>
+      <form action="#" class="cabinet__form">
+        <div class="cabinet__pic">
+          <figure class="cabinet__img">
+            <img src="img/img-1.png" alt="" width="570" height="570">
+          </figure>
+          <input type="file" id="file" class="cabinet__file">
+          <label for="file" class="cabinet__upload">Загрузить фото</label>
+        </div>
+        <div class="cabinet__block">
+          <fieldset class="form__field">
+            <input type="text" id="name" class="form__input" required>
+            <label for="name" class="form__label">Имя<span>*</span></label>
+          </fieldset>
+          <fieldset class="form__field">
+            <input type="tel" id="phone" class="form__input" required>
+            <label for="phone" class="form__label">Телефон<span>*</span></label>
+          </fieldset>
+          <fieldset class="form__field">
+            <input type="email" id="email" class="form__input" required>
+            <label for="email" class="form__label">E-mail<span>*</span></label>
+          </fieldset>
+        </div>
+        <div class="cabinet__block">
+          <fieldset class="form__field">
+            <input type="password" id="password" class="form__input" required>
+            <label for="password" class="form__label">Старый пароль<span>*</span></label>
+          </fieldset>
+          <fieldset class="form__field">
+            <input type="password" id="password2" class="form__input" required>
+            <label for="password2" class="form__label">Новый пароль<span>*</span></label>
+          </fieldset>
+          <fieldset class="form__field">
+            <input type="password" id="password3" class="form__input" required>
+            <label for="password3" class="form__label">Подтвердить пароль<span>*</span></label>
+          </fieldset>
+        </div>
+        <div class="cabinet__btn">
+          <button type="submit" class="btn cabinet__apply">Применить</button>
+        </div>
+      </form>
       
-      <div class="master__item master__item--class">
-        <a data-fancybox href="https://youtu.be/awp0Y95D17g" class="master__img">
-          <img src="img/master-2.jpg" alt="Вязание детской шапочки" width="535" height="400">
-          <span class="master__play"></span>
-        </a>
-        <div class="master__info">
-          <div class="master__text">
-            <p><b>Дата: </b>14.06.2018</p>
-            <p><b>Начало: </b>15:00</p>
-            <p><b>Продолжительность: </b>2 часа</p>
-            <p><b>Спикер: </b>Анастасия Смирнова</p>
-            <p><b>Адрес: </b>Каменоостровский проспект  123, Санкт-Петербург, м. Василеостровская</p>
-          </div>
-          <div class="master__text">
-            <p><b>Описание:</b></p>
-            <p>На мастер-классе по вязанию шапочки от магазина  наши спикеры научат вас как за 2 часа создать уникальную и неповторимую вещь. Вы выйдете из студии с готовым изделием и красивым изделием.</p>
-          </div>
-          <div class="master__text">
-            <p><b>Что входит в стоимость:</b></p>
-            <ul>
-              <li>Спицы Lykke</li>
-              <li>Пряжа Daruma</li>
-              <li>Схема для вязания</li>
+      <div class="history">
+        <div class="title">
+          <p class="title-h4">История заказов</p>
+          <select class="form__select">
+            <option value="1">Сначала недавние</option>
+            <option value="2">Сначала давние</option>
+          </select>
+        </div>
+        
+        <div class="history__order">
+          <time datetime="2018-06-27">27.06.2018</time>
+          <div class="history__wrap">
+            <p class="history__number">Заказ № 236</p>
+            <ul class="history__list">
+              <li class="history__item">
+                <figure class="history__img">
+                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+                </figure>
+                <div class="history__info">
+                  <a href="#" class="history__title">Daruma Shades of Cotton Linen</a>
+                  <p>Цвет № 12, Dark Grey</p>
+                  <p>Код товара: 4033493240147</p>
+                </div>
+                <p class="history__price">Аренда 2 340 &#8381;</p>
+              </li>
+              <li class="history__item">
+                <figure class="history__img">
+                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+                </figure>
+                <div class="history__info">
+                  <a href="#" class="history__title">Lana Grossa Shades of Cotton Linen</a>
+                  <p>Цвет № 166, Blue Sky</p>
+                  <p>Код товара: 4033493240147</p>
+                </div>
+                <p class="history__price">1200 &#8381;</p>
+              </li>
+              <li class="history__item">
+                <figure class="history__img">
+                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+                </figure>
+                <div class="history__info">
+                  <a href="#" class="history__title">Спицы разъёмные LYKKE, дерево Driftwool, длина 11,5 см</a>
+                  <p>Материал: дерево</p>
+                  <p>Код товара: 6578948673</p>
+                </div>
+                <p class="history__price">600 &#8381;</p>
+              </li>
             </ul>
-          </div>
-          <div class="master__wrap">
-            <a data-fancybox data-src="#call" href="javascript:;" class="btn master__btn">Записаться</a>
+            <div class="history__delivery">
+              <address>
+                <p>Доставка по адресу:</p>
+                <p>Серебристый б-р, дом 26, квартира 34 Санкт-Петербург, Россия</p>
+              </address>
+              <p>Итого: <b>114 140 &#8381;</b></p>
+            </div>
+            <a href="#" class="btn history__btn">Повторить заказ</a>
           </div>
         </div>
-      </div>
-    </section>
-    
-    <section class="review wrapper">
-      <p class="title-h3">Отзывы с прошлого мастер-класса</p>
-      <ul class="review__list">
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
+        
+        <div class="history__order">
+          <time datetime="2018-06-27">27.06.2018</time>
+          <div class="history__wrap">
+            <p class="history__number">Заказ № 236</p>
+            <ul class="history__list">
+              <li class="history__item">
+                <figure class="history__img">
+                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+                </figure>
+                <div class="history__info">
+                  <a href="#" class="history__title">Daruma Shades of Cotton Linen</a>
+                  <p>Цвет № 12, Dark Grey</p>
+                  <p>Код товара: 4033493240147</p>
+                </div>
+                <p class="history__price">Аренда 2 340 &#8381;</p>
+              </li>
+              <li class="history__item">
+                <figure class="history__img">
+                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+                </figure>
+                <div class="history__info">
+                  <a href="#" class="history__title">Lana Grossa Shades of Cotton Linen</a>
+                  <p>Цвет № 166, Blue Sky</p>
+                  <p>Код товара: 4033493240147</p>
+                </div>
+                <p class="history__price">1200 &#8381;</p>
+              </li>
+              <li class="history__item">
+                <figure class="history__img">
+                  <img src="img/slide-12.jpg" alt="Заказ" width="503" height="429">
+                </figure>
+                <div class="history__info">
+                  <a href="#" class="history__title">Спицы разъёмные LYKKE, дерево Driftwool, длина 11,5 см</a>
+                  <p>Материал: дерево</p>
+                  <p>Код товара: 6578948673</p>
+                </div>
+                <p class="history__price">600 &#8381;</p>
+              </li>
+            </ul>
+            <div class="history__delivery">
+              <address>
+                <p>Доставка по адресу:</p>
+                <p>Серебристый б-р, дом 26, квартира 34 Санкт-Петербург, Россия</p>
+              </address>
+              <p>Итого: <b>114 140 &#8381;</b></p>
+            </div>
+            <a href="#" class="btn history__btn">Повторить заказ</a>
           </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-      </ul>
-      
-      <nav class="pagination">
-        <a href="#" class="pagination__link pagination__link--disabled">&lsaquo;</a>
-        <a href="#" class="pagination__link">1</a>
-        <a href="#" class="pagination__link">2</a>
-        <a href="#" class="pagination__link">3</a>
-        <input type="text" class="pagination__input" value="7">
-        <a href="#" class="pagination__link">10</a>
-        <a href="#" class="pagination__link">&rsaquo;</a>
-      </nav>
-    </section>
-    
-    <section class="slider wrapper">
-      <p class="title-h3">Фото с прошлого мастер-класса</p>
-      
-      <div class="slider__wrap">
-        <div class="fotorama" 
-          data-width="100%"
-          data-nav="thumbs"
-          data-thumbwidth="170"
-          data-thumbheight="118">
-          <a href="img/master-3.jpg">
-            <img src="img/master-3.jpg">
-          </a>
-          <a href="img/master-4.jpg">
-            <img src="img/master-4.jpg">
-          </a>
-          <a href="img/article.jpg">
-            <img src="img/article.jpg">
-          </a>
-          <a href="img/master-2.jpg">
-            <img src="img/master-2.jpg">
-          </a>
-          <a href="img/master-1.jpg">
-            <img src="img/master-1.jpg">
-          </a>
         </div>
       </div>
     </section>
@@ -249,40 +270,7 @@
     </div>
   </footer>
   
-  <!-- Modal window -->
-  <div style="display: none;" id="call" class="modal">
-    <p class="title-h4">Запись на мастер-класс «Вязание шапочки»</p>
-    <form action="#" method="post" class="form">
-      <fieldset class="form__field">
-        <input type="text" id="name" class="form__input" required>
-        <label for="name" class="form__label">Имя<span>*</span></label>
-      </fieldset>
-      <fieldset class="form__field">
-        <input type="tel" id="phone" class="form__input" required>
-        <label for="phone" class="form__label">Телефон<span>*</span></label>
-      </fieldset>
-      <fieldset class="form__field">
-        <input type="email" id="email" class="form__input" required>
-        <label for="email" class="form__label">E-mail<span>*</span></label>
-      </fieldset>
-      <p>Оплата</p>
-      <input type="radio" id="visa" name="payment" class="form__radio" checked>
-      <input type="radio" id="cash" name="payment" class="form__radio">
-      <div class="form__wrap">
-        <label for="visa" class="form__pay form__pay--visa">Банковской картой онлайн</label>
-        <label for="cash" class="form__pay form__pay--cash">На месте наличными или картой</label>
-      </div>
-      <input type="checkbox" id="robot" class="form__checkbox">
-      <label for="robot" class="form__check">Я не робот</label>
-      <button type="button" class="btn form__btn">Подтвердить</button>
-      <span>Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
-    </form>
-  </div>
-  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js">
-  </script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </body>
 </html>

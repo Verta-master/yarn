@@ -2468,6 +2468,28 @@ a.breadcrumbs__link:active {
 .form__input:focus + .form__label {
   display: none;
 }
+.form__select {
+  width: 270px;
+  height: 45px;
+  padding: 0 14px;
+  color: #A0A0A0;
+  border-radius: 4px;
+  border: 1px solid #A0A0A0;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-image: url(../img/icon-down.svg);
+  background-repeat: no-repeat;
+  background-position: center right 15px;
+  background-size: 9px 6px;
+  outline: none;
+  cursor: pointer;
+}
+.form__select::-ms-expand {
+  color: transparent;
+  border: none;
+  background-color: transparent;
+}
 .form__label {
   position: absolute;
   top: 14px;
@@ -2760,4 +2782,184 @@ a.breadcrumbs__link:active {
 #reg:checked ~ .login__wrap .login__label--reg {
   color: #6E6E6E;
   border-bottom: 1px solid #6E6E6E;
+}
+.cabinet {
+  padding-top: 10px;
+}
+.cabinet__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 50px;
+  padding-top: 5px;
+  border-bottom: 1px solid #6E6E6E;
+}
+.cabinet__img {
+  width: 170px;
+  height: 160px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cabinet__file {
+  display: none;
+}
+.cabinet__upload {
+  display: block;
+  text-decoration: underline;
+  position: relative;
+  padding-left: 30px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.cabinet__upload::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 17px;
+  background-image: url(../img/icon-camera.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.cabinet__upload:hover,
+.cabinet__upload:active {
+  text-decoration: none;
+}
+.cabinet__pic {
+  margin-right: 30px;
+}
+.cabinet__block {
+  width: 270px;
+  margin-right: 30px;
+}
+.cabinet__apply {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 170px;
+  margin-bottom: 25px;
+}
+.cabinet__btn {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+.history {
+  width: 770px;
+  padding-top: 50px;
+  padding-bottom: 25px;
+}
+.history time {
+  display: block;
+  margin-top: 10px;
+  font-size: 16px;
+  color: #A0A0A0;
+}
+.history__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.history__number {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.history__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #A0A0A0;
+}
+.history__item:first-child {
+  border-top: 1px solid #A0A0A0;
+}
+.history__item p {
+  margin: 0;
+}
+.history__title {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+.history__title:hover,
+.history__title:active {
+  text-decoration: underline;
+}
+.history__img {
+  width: 120px;
+  height: 120px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.history__info {
+  width: 400px;
+}
+.history__price {
+  width: 130px;
+  text-align: right;
+  font-weight: 700;
+}
+.history__delivery {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.history__delivery address {
+  font-style: normal;
+  max-width: 330px;
+}
+.history__delivery p {
+  margin: 0;
+}
+.history__btn {
+  width: 170px;
+}
+.history__order {
+  margin-bottom: 25px;
+}
+.history__wrap {
+  padding: 30px 35px;
+  -webkit-box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+          box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
 }
