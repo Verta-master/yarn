@@ -2423,6 +2423,13 @@ a.breadcrumbs__link:active {
   line-height: 1.2;
   letter-spacing: 0.1em;
 }
+.form a {
+  font-size: 11px;
+}
+.form a:hover,
+.form a:active {
+  text-decoration: underline;
+}
 .form__field {
   margin: 0;
   padding: 0;
@@ -2442,7 +2449,7 @@ a.breadcrumbs__link:active {
 }
 .form__label {
   position: absolute;
-  top: 10px;
+  top: 14px;
   left: 15px;
   color: #A0A0A0;
 }
@@ -2674,4 +2681,62 @@ a.breadcrumbs__link:active {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 49px 36px;
+}
+.password {
+  width: 570px;
+}
+.login {
+  width: 370px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+  padding: 40px 70px;
+  -webkit-box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+          box-shadow: 10px 5px 30px rgba(235, 208, 199, 0.36);
+  border-radius: 4px;
+}
+.login .form__btn {
+  width: 100%;
+}
+.login__wrap {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 25px;
+}
+.login__wrap::after {
+  content: "|";
+  position: absolute;
+  top: 0;
+  left: 65px;
+  color: #A0A0A0;
+  font-size: 24px;
+  line-height: 1;
+}
+.login__tab,
+.login__radio {
+  display: none;
+}
+.login__label {
+  font-family: "Lora", "Arial", sans-serif;
+  font-size: 24px;
+  line-height: 1;
+  color: #A0A0A0;
+  cursor: pointer;
+}
+#login:checked ~ #login1,
+#reg:checked ~ #login2 {
+  display: block;
+}
+#login:checked ~ .login__wrap .login__label--in,
+#reg:checked ~ .login__wrap .login__label--reg {
+  color: #6E6E6E;
+  border-bottom: 1px solid #6E6E6E;
 }

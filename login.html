@@ -6,8 +6,6 @@
   <meta  name="viewport" content="width=device-width,initial-scale=1">
   <title>Шестая Шерсть</title>
   <link href="https://fonts.googleapis.com/css?family=Lora|Montserrat:400,700&amp;subset=cyrillic-ext" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.css">
-  <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -82,139 +80,56 @@
   <main>
     <nav class="breadcrumbs wrapper">
       <a href="#" class="breadcrumbs__link">Главная</a>
-      <a href="#" class="breadcrumbs__link">Мастер-классы</a>
-      <span class="breadcrumbs__link">Вяжем свитер</span>
+      <a href="#" class="breadcrumbs__link">Личный кабинет</a>
+      <span class="breadcrumbs__link">Вход</span>
     </nav>
     
-    <section class="master wrapper">
-      <p class="master__total">133000 &#8381;</p>
-      <h1>Вязание детской шапочки<br>из мериноса и Альпаки для девочки</h1>
-      
-      <div class="master__item master__item--class">
-        <a data-fancybox href="https://youtu.be/awp0Y95D17g" class="master__img">
-          <img src="img/master-2.jpg" alt="Вязание детской шапочки" width="535" height="400">
-          <span class="master__play"></span>
-        </a>
-        <div class="master__info">
-          <div class="master__text">
-            <p><b>Дата: </b>14.06.2018</p>
-            <p><b>Начало: </b>15:00</p>
-            <p><b>Продолжительность: </b>2 часа</p>
-            <p><b>Спикер: </b>Анастасия Смирнова</p>
-            <p><b>Адрес: </b>Каменоостровский проспект  123, Санкт-Петербург, м. Василеостровская</p>
-          </div>
-          <div class="master__text">
-            <p><b>Описание:</b></p>
-            <p>На мастер-классе по вязанию шапочки от магазина  наши спикеры научат вас как за 2 часа создать уникальную и неповторимую вещь. Вы выйдете из студии с готовым изделием и красивым изделием.</p>
-          </div>
-          <div class="master__text">
-            <p><b>Что входит в стоимость:</b></p>
-            <ul>
-              <li>Спицы Lykke</li>
-              <li>Пряжа Daruma</li>
-              <li>Схема для вязания</li>
-            </ul>
-          </div>
-          <div class="master__wrap">
-            <a data-fancybox data-src="#call" href="javascript:;" class="btn master__btn">Записаться</a>
-          </div>
+    <div class="wrapper">
+      <div class="login">
+        <input type="radio" name="radio" id="login" class="login__radio" checked>
+        <input type="radio" name="radio" id="reg" class="login__radio">
+        <div class="login__wrap">
+          <label for="login" class="login__label login__label--in">Вход</label>
+          <label for="reg" class="login__label login__label--reg">Регистрация</label>
+        </div>
+        <div class="login__tab" id="login1">
+          <form action="#" method="post" class="form">
+            <fieldset class="form__field">
+              <input type="text" id="name" class="form__input">
+              <label for="name" class="form__label">Логин<span>*</span></label>
+            </fieldset>
+            <fieldset class="form__field">
+              <input type="password" id="password" class="form__input">
+              <label for="password" class="form__label">Пароль<span>*</span></label>
+            </fieldset>
+            <button type="button" class="btn form__btn">Войти</button>
+            <a href="#">Забыли пароль?</a>
+          </form>
+        </div>
+        <div class="login__tab" id="login2">
+          <form action="#" method="post" class="form">
+            <fieldset class="form__field">
+              <input type="text" id="name-reg" class="form__input">
+              <label for="name-reg" class="form__label">Имя<span>*</span></label>
+            </fieldset>
+               <fieldset class="form__field">
+              <input type="email" id="email-reg" class="form__input">
+              <label for="email-reg" class="form__label">E-mail<span>*</span></label>
+            </fieldset>
+            <fieldset class="form__field">
+              <input type="password" id="password-reg" class="form__input">
+              <label for="password-reg" class="form__label">Пароль<span>*</span></label>
+            </fieldset>
+            <fieldset class="form__field">
+              <input type="password" id="password-2" class="form__input">
+              <label for="password-2" class="form__label">Подтвердите пароль<span>*</span></label>
+            </fieldset>
+            <button type="button" class="btn form__btn">Зарегистрироваться</button>
+            <span>Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
+          </form>
         </div>
       </div>
-    </section>
-    
-    <section class="review wrapper">
-      <p class="title-h3">Отзывы с прошлого мастер-класса</p>
-      <ul class="review__list">
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-        <li class="review__item">
-          <figure class="review__img">
-            <img src="img/img-1.png" alt="Отзывы с прошлого мастер-класса" width="570" height="570">
-          </figure>
-          <div class="review__info">
-            <p class="review__title">Татьяна Владимировна</p>
-            <time datetime="2018-06-10">10.06.2018</time>
-            <p>Замечательный мастер-класс. Все очень понравилось. Получилась очень красивая и мягкая шапочка. Преподаватели квалифицированные и компетентные, все объясняют очень доходчиво и индивидуально подходят к каждому. Остались только приятные впечатления. Всем рекомендую.</p>
-          </div>
-        </li>
-      </ul>
-      
-      <nav class="pagination">
-        <a href="#" class="pagination__link pagination__link--disabled">&lsaquo;</a>
-        <a href="#" class="pagination__link">1</a>
-        <a href="#" class="pagination__link">2</a>
-        <a href="#" class="pagination__link">3</a>
-        <input type="text" class="pagination__input" value="7">
-        <a href="#" class="pagination__link">10</a>
-        <a href="#" class="pagination__link">&rsaquo;</a>
-      </nav>
-    </section>
-    
-    <section class="slider wrapper">
-      <p class="title-h3">Фото с прошлого мастер-класса</p>
-      
-      <div class="slider__wrap">
-        <div class="fotorama" 
-          data-width="100%"
-          data-nav="thumbs"
-          data-thumbwidth="170"
-          data-thumbheight="118">
-          <a href="img/master-3.jpg">
-            <img src="img/master-3.jpg">
-          </a>
-          <a href="img/master-4.jpg">
-            <img src="img/master-4.jpg">
-          </a>
-          <a href="img/article.jpg">
-            <img src="img/article.jpg">
-          </a>
-          <a href="img/master-2.jpg">
-            <img src="img/master-2.jpg">
-          </a>
-          <a href="img/master-1.jpg">
-            <img src="img/master-1.jpg">
-          </a>
-        </div>
-      </div>
-    </section>
+    </div>
   </main>
   
   <footer class="footer">
@@ -249,40 +164,7 @@
     </div>
   </footer>
   
-  <!-- Modal window -->
-  <div style="display: none;" id="call" class="modal">
-    <p class="title-h4">Запись на мастер-класс «Вязание шапочки»</p>
-    <form action="#" method="post" class="form">
-      <fieldset class="form__field">
-        <input type="text" id="name" class="form__input">
-        <label for="name" class="form__label">Имя<span>*</span></label>
-      </fieldset>
-      <fieldset class="form__field">
-        <input type="tel" id="phone" class="form__input">
-        <label for="phone" class="form__label">Телефон<span>*</span></label>
-      </fieldset>
-      <fieldset class="form__field">
-        <input type="email" id="email" class="form__input">
-        <label for="email" class="form__label">E-mail<span>*</span></label>
-      </fieldset>
-      <p>Оплата</p>
-      <input type="radio" id="visa" name="payment" class="form__radio" checked>
-      <input type="radio" id="cash" name="payment" class="form__radio">
-      <div class="form__wrap">
-        <label for="visa" class="form__pay form__pay--visa">Банковской картой онлайн</label>
-        <label for="cash" class="form__pay form__pay--cash">На месте наличными или картой</label>
-      </div>
-      <input type="checkbox" id="robot" class="form__checkbox">
-      <label for="robot" class="form__check">Я не робот</label>
-      <button type="button" class="btn form__btn">Подтвердить</button>
-      <span>Нажимая на кнопку, вы даете согласие на обработку персональных данных</span>
-    </form>
-  </div>
-  
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.1/jquery.fancybox.min.js">
-  </script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
 </body>
 </html>
