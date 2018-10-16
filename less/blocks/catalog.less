@@ -168,6 +168,7 @@
 }
 
 .catalog__text {
+  margin-bottom: 10px;
   font-size: 13px;
   line-height: 17px;
   
@@ -245,6 +246,26 @@
     background-position: center;
     background-size: 12px 9px;
   }
+}
+
+.catalog__rent {
+  color: @pink;
+  
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+.catalog__close {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-image: url(../img/icon-cross.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .catalog__hide {
