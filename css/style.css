@@ -449,7 +449,9 @@ h6 {
   font-family: "Lora", "Arial", sans-serif;
   font-weight: 400;
 }
+.title-h1,
 h1 {
+  font-family: "Lora", "Arial", sans-serif;
   margin-top: 0;
   margin-bottom: 35px;
   font-size: 48px;
@@ -2648,4 +2650,28 @@ a.breadcrumbs__link:active {
 }
 .tabs__item {
   padding-top: 25px;
+}
+.thanks {
+  position: relative;
+  padding-top: 140px;
+  text-align: center;
+}
+.thanks .title-h1 {
+  margin-bottom: 10px;
+}
+.thanks::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #A6B389;
+  background-image: url(../img/icon-tick-green.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 49px 36px;
 }
